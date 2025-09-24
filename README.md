@@ -68,3 +68,4 @@ The `terraform/` folder includes an example that:
 - This script permanently deletes snapshots. Test in non-production first.
 - Use least privilege for service accounts.
 - Ensure monitoring/alerts for unintended deletions.
+# test redeploy
