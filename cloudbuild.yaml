@@ -13,4 +13,8 @@ steps:
       - --allow-unauthenticated
       - --set-env-vars=RETENTION_DAYS=30,DRY_RUN=false
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+  logsBucket: gs://cf-build-logs-bucket
+
 timeout: "900s"
