@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - functions
+      - deploy
+      - delete-old-snapshots
+      - --gen2
+      - --runtime=python310
+      - --region=us-central1
+      - --entry-point=delete_old_snapshots_http
+      - --trigger-http
+      - --allow-unauthenticated
+      - --set-env-vars=RETENTION_DAYS=30,DRY_RUN=false
+
+timeout: "900s"
